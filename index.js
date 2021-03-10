@@ -13,6 +13,7 @@ function nestedTarget() {
     right? :) ). (Note that in `index.html` `#nested` and `.target` just
     _happen_ to be `div`s. This method should work with arbitrary elements.)
   */
+  return document.querySelector('.target');
 }
 
 function increaseRankBy(n) {
