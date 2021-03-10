@@ -40,4 +40,13 @@ function deepestChild() {
     `querySelector()` and `querySelectorAll()` on them. This is challenging to
     implement correctly, but not beyond your ability!)
     */
+    let node = document.getElementById('grand-node');
+  let nextNode = node.children[0];
+
+  while (nextNode) {
+    node = nextNode;
+    nextNode = node.children[0];
+  }
+
+  return node;
 }
