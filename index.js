@@ -21,13 +21,15 @@ function increaseRankBy(n) {
   that increases the ranks in all of the
     `.ranked-list`s by `n`. (You might need to make use of [`parseInt()`][parseint]
   */
-  const lis = document
-  .getElementById('app')
-  .querySelectorAll('ul.ranked-list li');
+  const lists = document.querySelectorAll('.ranked-list');
+  for (let i = 0, l = lists.length; i < l; i++) {
+  let children = rankedLists[i].children;
 
-for (let i = 0; i < lis.length; i++) {
-  console.log(lis[i].innerHTML);
+  for (let j = 0, k = children.length; j < k; j++) {
+    children[j].innerHTML = parseInt(children[j].innerHTML) + n;
   }
+}
+
 }
 
 function deepestChild() {
